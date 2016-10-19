@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>HappDev</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap imports -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- This links the external css sheet -->    
+<link rel="stylesheet" href="style.css">
+
+<!-- Javascript functions -->
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+        
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+    
+</head>
+<body>
+<header role="banner">
+<nav id="navbar-primary" class="navbar" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#top">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#top"><img id="logo-navbar-middle" src="HDLogo.png" width="70" alt="Logo Thing main logo"></a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#social">Social</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#members">Members</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header><!-- header role="banner" -->
+    <div class="main" id = "top">
+  <section>
+        <h1 class = "placeholder">Home</h1>
+        </section>
+</div>
+    
+<div class="main" id="about-us">
+  <section>
+            <h1 class = "placeholder">About Us</h1>
+</section>
+</div>
+
+<div class="main" id="calendar">
+  <section>
+            <h1 class = "placeholder">Calendar</h1>
+</section>
+</div>
+    
+<div class="main" id="news">
+  <section>
+            <h1 class = "placeholder">News</h1>
+</section>
+</div>
+    
+<div class="main" id="blog">
+  <section>
+    <h1 class = "placeholder">Blog</h1>
+    </section>
+</div>
+    
+<div class="main" id="projects">
+  <section>
+    <h1 class = "placeholder">Projects</h1></section>
+</div>
+    
+<div class="main" id="social">
+  <section>
+    <h1 class = "placeholder">Social Media</h1></section>
+</div>
+    
+<div class="main" id="donate">
+  <section>
+    <h1 class = "placeholder">Donate</h1></section>
+</div>
+    
+<div class="main" id="contact">
+  <section>
+    <h1 class = "placeholder">Contact Us</h1></section>
+</div>
+    
+<div class="main" id="members">
+  <section>
+    <h1 class = "placeholder">Members Portal</h1></section>
+</div>
+    
+    </body>
+</html>

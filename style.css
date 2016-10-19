@@ -1,0 +1,51 @@
+#navbar-primary {
+    width: 100%;
+    float: none;
+}
+    
+#navbar-primary .navbar-nav { 
+  background: #ededed;
+opacity: 0.9;
+  width: 100%;
+  text-align: center;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    margin-right: 10px;
+    position: fixed;
+    }
+    
+#navbar-primary li {
+    display: inline-block;
+    float: none;
+    }
+    
+#navbar-primary a {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+    
+@media (min-width: 768px) and (max-width: 1000px) {
+   .collapse {
+       display: !important;
+   }
+}
+    
+body, html, .main {
+    height: 100%;
+    background-color: black;
+}
+
+section {
+    min-height: 100%;
+}
+    
+h1.placeholder {
+    font-family: Helvetica;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100vh; 
+    color: white;
+}
