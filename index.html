@@ -1,127 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
+
 <head>
-<title>HappDev</title>
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap imports -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Layout for My homies">
+    <meta name="author" content="A bunch of people">
 
-<!-- This links the external css sheet -->    
-<link rel="stylesheet" href="style.css">
-
-<!-- Javascript functions -->
-<script>
-$(document).ready(function(){
-  $("a").on('click', function(event) {
-
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-        
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    } 
-  });
-});
-</script>
+    <title>HappDev</title>
     
+    <!-- Get jQuery -->
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     <script type="text/javascript" src="js/typed.min.js"></script>
+    
+    <!-- JS Functions -->
+        <script>
+            $(function(){ 
+            $("#typed").typed({
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 30,
+            backDelay: 500,
+            loop: true,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+            });
+
+            $(".reset").click(function(){
+                $("#typed").typed('reset');
+                });
+            });
+
+            function newTyped(){ /* A new typed object */ }
+            function foo(){ console.log("Callback"); }
+        </script>
+    
+    <!-- Bootstrap Core CSS -->
+     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+     <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+     <link rel="stylesheet" href="vendor/device-mockups/device-mockups.min.css">
+
+    <!-- Theme CSS -->
+     <link href="css/new-age.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  
 </head>
-<body>
-<header role="banner">
-<nav id="navbar-primary" class="navbar" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-primary-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#top">Home</a></li>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#calendar">Calendar</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#top"><img id="logo-navbar-middle" src="HDLogo.png" width="70" alt="Logo Thing main logo"></a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#social">Social</a></li>
-        <li><a href="#donate">Donate</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#members">Members</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-</header><!-- header role="banner" -->
-    <div class="main" id = "top">
-  <section>
-        <h1 class = "placeholder">Home</h1>
-        </section>
-</div>
-    
-<div class="main" id="about-us">
-  <section>
-            <h1 class = "placeholder">About Us</h1>
-</section>
-</div>
 
-<div class="main" id="calendar">
-  <section>
-            <h1 class = "placeholder">Calendar</h1>
-</section>
-</div>
-    
-<div class="main" id="news">
-  <section>
-            <h1 class = "placeholder">News</h1>
-</section>
-</div>
-    
-<div class="main" id="blog">
-  <section>
-    <h1 class = "placeholder">Blog</h1>
+     <!-- TOP browser -->
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="img/Hdev.png" class="img-responsive" alt=""></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#Home">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#AboutUs">About US</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <h1>H[App]INESS DEVELOPMENT</h1>
+                            <h3>Create. Innovate. Develop Happiness.</h3>
+                                <div id = "typed-strings">
+                                    <h1>Mobile Applications</h1>
+                                    <p>Web Applications</p>
+                                    <p>Web pages</p>
+                                    <p>Servers</p>
+                                    <p>Hardware</p>
+                                </div>
+     		                     <span id = "typed"></span>
+                        </div>   
+                    </div>
+                </div>
+             
+                <div class="col-sm-5">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="screen"> 
+                                    <img src="img/demo-screen-1.jpg" class="img-responsive" alt="">
+                                </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           </div>
+    </header>
+
+    <!-- 2nd browser -->
+    <section id="download" class="download bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    
+                    <h2 class="section-heading">Discover what all the buzz is about!</h2>
+                    <p>Our app is available on any mobile device! Download now to get started!</p>
+                    <div class="badges">
+                        <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
+                        <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-</div>
     
-<div class="main" id="projects">
-  <section>
-    <h1 class = "placeholder">Projects</h1></section>
-</div>
+<!-- 3rd browser -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>Unlimited Features, Unlimited Fun</h2>
+                        <p class="text-muted">Check out what you can do with this app theme!</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="img/demo-screen-1.jpg" class="img-responsive" alt=""> </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-screen-smartphone text-primary"></i>
+                                    <h3>Device Mockups</h3>
+                                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-camera text-primary"></i>
+                                    <h3>Flexible Use</h3>
+                                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-present text-primary"></i>
+                                    <h3>Free to Use</h3>
+                                    <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-lock-open text-primary"></i>
+                                    <h3>Open Source</h3>
+                                    <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- 3rd field-->
+    <section class="">
+        <div class="cta-content">
+            <div class="container">
+                
+                <h2>WEB RE-DESIGN + BONUS WEB APP</h2>
+                
+                <p>Members will learn through officer-guided tutorials and lessons how to fully develop a website from scratch using HTML5, CSS, and JavaScript</p>
+                
+                <p>This new website will also include a "Members Only" portal, which will premiere our web app for managing team projects.</p>
+                
+                <p>Features:</p>
+                <ul dir="ltr"><li>Scheduling</li>
+                    <li>Task board (Kanban style)</li>
+                    <li>Task break-down</li>
+                    <li>Manager roles that can account for deadlines</li>
+                    <li>Team calendar</li>
+                    <li>File System</li></ul>
+                
+                <a href="#contact" class="btn btn-outline btn-xl page-scroll">yo</a>
+                
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section>
+        
+        <!-- Final browser -->
+
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>We <i class="fa fa-heart"></i> new friends!</h2>
+            <ul class="list-inline list-social">
+                <li class="social-twitter">
+                    <a href="http://www.twitter.com/happdev/" target="_blank"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social-facebook">
+                    <a href="http://www.facebook.com/happdevfam" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social-google-plus">
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+<!-- Foot browser -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2017 All rights reserved for Happiness Development and University of Washington club etc..</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     
-<div class="main" id="social">
-  <section>
-    <h1 class = "placeholder">Social Media</h1></section>
-</div>
+  
     
-<div class="main" id="donate">
-  <section>
-    <h1 class = "placeholder">Donate</h1></section>
-</div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/new-age.min.js"></script>
+
     
-<div class="main" id="contact">
-  <section>
-    <h1 class = "placeholder">Contact Us</h1></section>
-</div>
-    
-<div class="main" id="members">
-  <section>
-    <h1 class = "placeholder">Members Portal</h1></section>
-</div>
-    
-    </body>
+</body>
+
 </html>
